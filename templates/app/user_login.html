@@ -1,0 +1,23 @@
+{%  extends 'app/base.html' %}
+
+{% block title %} login page  {% endblock %}
+
+
+{%  block content %}
+
+this is login page 
+<form method="post" action=".">
+  {% csrf_token %}
+
+  {{ form.as_p}}
+
+
+
+  <button class="py-4 px-8 bg-blue-500 text-black"> login </button>
+</form>
+
+
+
+
+
+{% endblock  %}

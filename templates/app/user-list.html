@@ -1,0 +1,28 @@
+{%  extends 'app/base.html' %}
+
+{%  block content %}
+ <div class="container py-5">
+    <table class="table table-bordered py-5">
+        <thead class="table table-dark">
+          <tr>
+            <th>Sr 
+                No
+            </th>
+            <th>Username</th>
+            <th>Email</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+          <tr>
+           <td>{{ forloop.counter }}</td>
+           <td>{{ user.username }}</td>
+           <td>{{ user.email }}</td>
+          </tr>
+         {% endfor %}
+         
+        </tbody>
+      </table>
+ </div>
+ {% endblock %}
