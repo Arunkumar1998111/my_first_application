@@ -10,24 +10,59 @@
 </div>
  {% endfor  %}
  {% endif %}
- <div class="container">
-    <div class="row  d-flex justify-content-center py-5">
-      <div class="col-12 col-md-6">
-        <h2>login </h2>
+ <div class="container-fluid d-flex ">
+
+  <div class="row">
+    <div class="col">
+    
+   
+      <div class="card border-0 py-5" style="min-width: 730px;">
+        <h2 class="text-center">Login </h2>
         {% comment %} POST to send data
         {% csrf_token %} tags for security
          The form's contents are outputted between paragraph tags {{ form.as_p }} 
         {% endcomment %}
-        <form method="post" action="{% url 'signin' %}">       
+        <div class="row d-flex justify-content-center py-5">
+          <div class="col-md-9 col-12">
+        <form method="post" action="{% url 'signin' %}" class="needs-validation novalidate">       
             {% csrf_token %}
             {{ form }}
-            <input type="submit" class="btn btn-primary w-100 btn btn-lg " value="Login">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <input type="submit" class="btn btn-primary w-100 btn btn-lg my-4" value="Login">
         </form>
+        </div>
+        </div>
+      </div>
 
         
+      </div
+      >
+
+    
+      <div class="col">
+       
+        <div class="card mb-3 border-0 border" style="max-width: 540px;">
+
+          
+       
+         
+       
+         
+            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg" alt="" style="height:648px; width:750px">
+           
+          </div>
+      
+    
+  
       </div>
+      
+     
     </div>
  </div>
+</div>
+
 
  
   

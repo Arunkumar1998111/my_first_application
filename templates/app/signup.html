@@ -5,22 +5,22 @@
 
 {%  block content %}
 
-this is signup page 
 
 <div class="container">
   
   <div class="row  d-flex justify-content-center py-5">
     <div class="col-12 col-md-6">
 <form method="post" action="." class="bg-light border border-1 py-5 px-5">
-  <h2 class="text-center">signup  Form</h2>
+  <h2 class="text-center">Signup </h2>
   {% csrf_token %}
 
 
   {{ form }}
 
+  
 
-
-  <button class="btn btn-primary btn-lg my-3 "> Submit </button>
+  <button class="btn btn-primary btn-lg my-3 w-100"> Submit </button>
+  Already Have An Account ? <a href="{% url 'signin' %}" class="text-decoration-none">Login</a>
 </form>
 </div>
   </div>

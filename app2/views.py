@@ -72,6 +72,11 @@ def signup(request):
     return render(request, "app/signup.html", {"form": form})
 
 
+def delete_user(request,id):
+
+    user = User.objects.get(id=id)
+    user.delete()
+    return redirect("user-list")
 
 def user_login(request):
 

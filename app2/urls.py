@@ -1,6 +1,6 @@
 
 from django.urls import path
-from app2.views import signup,user_login,signin,about,sign_out,homepage,user_list
+from app2.views import signup,user_login,signin,about,sign_out,homepage,user_list,delete_user
 
 
 
@@ -13,6 +13,7 @@ urlpatterns = [
     path('about/',about,name="about"),
     path('logout/',sign_out,name='logout'),
     path('user-list',user_list,name='user-list'),
+    path('delete-user/<int:id>/',delete_user, name='delete-user')
     
 
 
