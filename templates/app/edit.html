@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %} {% block title %}
+   updatestudent form
+{% endblock %} {% block content %}
+  <div class="container">
+    <div class="row d-flex justify-content-center py-5">
+      <div class="col-12 col-md-6">
+        <h1>update</h1>
+        <form method="post" action="/update/{{ d.id }}" class="bg-light border border-1 py-5 px-5">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the student name" name="name" value={{d.name}} required />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the student Email" name="email" value={{d.email}} required />
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control mt-2" placeholder="Enter the student age" name="age" value={{d.age}} required />
+          </div>
+          <br />
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
